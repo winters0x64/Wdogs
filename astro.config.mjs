@@ -9,5 +9,5 @@ import preact from '@astrojs/preact';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  site: "https://winters0x64.github.io",
+  site: "https://winters0x64.xyz",
 });
