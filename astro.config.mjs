@@ -9,6 +9,6 @@ import preact from '@astrojs/preact';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
-  site: "http://localhost:4321"
-
+  site: "https://winters0x64.github.io",
+  base: "/Wdogs"
 });
