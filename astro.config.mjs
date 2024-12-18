@@ -10,5 +10,5 @@ import preact from '@astrojs/preact';
 export default defineConfig({
   integrations: [tailwind(), preact()],
   site: "https://winters0x64.github.io",
-  base: "/Wdogs"
+  base: "Wdogs"
 });
