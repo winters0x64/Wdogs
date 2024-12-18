@@ -1,8 +1,5 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About Me"
 const identity = {
@@ -10,40 +7,8 @@ const identity = {
 	lastName: "Krishnan",
 	age: 20
 }
-const skills = ["HTML", "CSS", "JavaScript", "React", "Node.js"]
-
-const skillColor = "purple";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style define:vars={{skillColor}}>
-			h1 {
-			  color: purple;
-			  font-size: 4rem;
-			}
-			.skill {
-				color: var(--skillColor);
-				font-weight: bold;
-			}
-		  </style>
-	</head>
-	<body class="">
-        <Header />
-		<h1>{pageTitle}</h1>
-		<p>
-			Hello! I'm {identity.firstName} {identity.lastName}.
-			{identity.age > 18 ? "<b>I'm an adult</b>" : "I'm a minor."}
-			{skills.map((e) => <li class="skill">{e}</li>)}
-		</p>
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		  </script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<p class="text-2xl">Hello i'm {identity.firstName + identity.lastName}, Web Security Researcher and CTF player@teambi0s, Blog's under constant work and will improve drastically later on </p>
+</BaseLayout>
