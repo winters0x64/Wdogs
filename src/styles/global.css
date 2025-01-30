@@ -63,3 +63,8 @@ pre::-webkit-scrollbar {
 pre::-webkit-scrollbar-thumb {
     background: #619d87;
 }
+
+img {
+    width: 100%;
+    max-width: 100%;
+}

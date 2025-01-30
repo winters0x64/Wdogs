@@ -283,7 +283,7 @@ exploit()
 ```
 
 Now, if we visit the corresponding note that the above exploit generates with the PPOLL exploit we can see alert popup
-[alert_box](../../imgs/post-1/javascrypto.png)
+![alert_box](./imgs/post-1/alert.png)
 
 # LocalStorage partitioning
 ---
@@ -308,7 +308,7 @@ So how can we now get the flag note's id, since it's overwritten by our noteid?
 
 The answer is that localstorage is partitioned in chrome meaning that if a site a.com has framed another site lets say c.com and b.com also frames the site c.com now if we set something in the localstorage of c.com  framed in  a.com, it won't be reflected in the c.com framed inside b.com, this behaviour is very similar to cache partitioning in chrome.
 
-[parition](../../imgs/post-1/partition.png)
+![parition](./imgs/post-1/partition.png)
 
 So we can just a link to admin bot, and then in the website create an iframe with src set to our malicious note's id along with the PPOLL exploit and then as the XSS payload inside the malicious note we can give 
 ```html
