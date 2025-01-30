@@ -1,7 +1,19 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout pageTitle="Winters">
-    <h1 class="">Winters</h1>
+<BaseLayout title="Home">
+	<div id="main_title">
+		<img src="/winters.png" alt="">
+	</div>
 </BaseLayout>
+
+<style>
+	#main_title {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+	}
+</style>

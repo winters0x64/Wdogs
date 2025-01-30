@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="Readme">
+    <div class="neon_blue" id="main_intro">
+        <div id="img_container">
+            <img src="/winters.png" alt="">
+        </div>
+		
+        <div id="intro_text">
+            <h1>Hello world, welcome.
+                <br>
+                The name's Arun, also go by the alias winters0x64, winters0x168, winters, 0xjinsai.
+                <br>
+                I love playing CTFs, exploiting realworld softwares and protocols(WEB2/WEB3) alike.
+                <br>
+                Here you'll find CTF writeups, Exploitation strategies, My thought process essentially.
+                <br>
+                <br>
+                <span class="neon_green">Thank you</span>
+                <br>
+                <span class="neon_green">Logging off....</span>
+            </h1>
+        </div>
+
+	</div>
+</BaseLayout>
+
+<style>
+    #img_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #intro_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60%;
+        width: 100%;
+        max-width: 100%;
+    }
+    @font-face {
+        font-family: 'Terminus';
+        src: url('/fonts/TerminusModern.ttf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    #main_intro {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Terminus';    
+        font-size: 1.25rem;
+        height: 100%;
+        width: 100%;
+	}
+
+    #intro_text h1 {
+        overflow: hidden;
+        white-space: normal;  
+        width: 0; 
+        animation: typing 3s steps(30, end) forwards;
+    }
+
+    @keyframes typing {
+        from { width: 0%; }
+        to { width: 68%; }
+    }
+
+    .neon_blue {
+        color: rgb(150, 195, 241);
+        text-shadow: #619d87 0px 0px 8px;
+    }
+
+    .neon_green {
+        color: #619d87;
+        text-shadow: #619d87 0px 0px 8px;
+    }
+</style>

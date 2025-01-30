@@ -1,46 +1,65 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html {
+    font-size: 16px; /* Base size for rem calculations */
+}
 
 h1, .heading-h1 {
-  font-size: 50px;
-  font-weight: bold;
+    font-size: 3.125rem; /* 50px / 16 = 3.125rem */
+    font-weight: bold;
+    color: rgb(150, 195, 241);
+    text-shadow: #619d87 0px 0px 8px;
 }
 
 h2, .heading-h2 {
-  font-size: 28px;
-  font-weight: bold;
+    font-size: 1.75rem; /* 28px / 16 = 1.75rem */
+    font-weight: bold;
+    color: rgb(150, 195, 241);
+    text-shadow: #619d87 0px 0px 8px;
 }
 
 h3, .heading-h3 {
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+    font-weight: bold;
+    color: rgb(150, 195, 241);
+    text-shadow: #619d87 0px 0px 8px;
 }
 
 h4, .heading-h4 {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+    font-weight: bold;
+    color: rgb(150, 195, 241);
+    text-shadow: #619d87 0px 0px 8px;
 }
 
 h5, .heading-h5 {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 1.125rem; /* 18px / 16 = 1.125rem */
+    font-weight: bold;
+    color: rgb(150, 195, 241);
+    text-shadow: #619d87 0px 0px 8px;
 }
 
 h6, .heading-h6 {
-  font-size: 16px;
-  font-weight: bold;
+    font-size: 1rem; /* 16px / 16 = 1rem */
+    font-weight: bold;
+    color: rgb(150, 195, 241);
+    text-shadow: #619d87 0px 0px 8px;
 }
 
 p {
-  font-size: 20px;
+    font-size: 1.5rem; /* 20px / 16 = 1.25rem */
 }
 
-html.dark {
-  background-color: #000000;
-  color: #fff;
+pre {
+    font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+    padding: 10px;
+    overflow-x: auto;
 }
 
-.dark .nav-links a {
-  color: #fff;
+pre::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+    background: rgb(26, 22, 22);
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: #619d87;
 }

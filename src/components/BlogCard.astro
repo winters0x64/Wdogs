@@ -1,0 +1,57 @@
+---
+let {url, title, description,date } = Astro.props;
+---
+
+<a href={url}>
+    <div id="blog_card">
+        <h1 class="neon_blue">{title}</h1>
+        <p>{description}</p>
+        <h2 class="neon_green">{date}</h2>
+    </div>
+</a>
+
+<style>
+    #blog_card{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #619d87;
+    }
+
+    #blog_card:hover {
+        background-color: rgb(26, 22, 22);
+    }
+
+    .neon_blue {
+        color: rgb(150, 195, 241);
+        text-shadow: #619d87 0px 0px 8px;
+    }
+
+    .neon_green {
+        color: #619d87;
+        text-shadow: #619d87 0px 0px 8px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #blog_card h1 {
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+
+    #blog_card p {
+        font-weight: bolder;
+        font-size: 1.5;
+    }
+
+    #blog_card h2 {
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+</style>

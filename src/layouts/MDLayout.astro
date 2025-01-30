@@ -1,0 +1,62 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+import '../styles/global.css';
+---
+
+<BaseLayout title={frontmatter.title}>
+    <div id="post_container">
+        <div id="post">
+            <h1 class="neon_blue">{frontmatter.title}</h1>
+            <p class="neon_green">{frontmatter.pubDate.toString().slice(0,10)}</p>
+            <p><em>{frontmatter.description}</em></p>
+            <p class="neon_green">Written by: {frontmatter.author}</p>
+            <div id="content">
+                <slot/>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    #post h1{
+        font-size: 5rem;
+    }
+
+    #post p{
+        font-size: 2rem;
+    }
+
+    @font-face {
+        font-family: 'Terminus';
+        src: url('/fonts/TerminusModern.ttf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    #post_container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-family: 'Terminus';
+    }
+
+    #post {
+        width: 80%;
+        height: 100%;
+    }
+
+    .neon_blue {
+        color: rgb(150, 195, 241);
+        text-shadow: #619d87 0px 0px 8px;
+    }
+
+    .neon_green {
+        color: #619d87;
+        text-shadow: #619d87 0px 0px 8px;
+    }
+</style>

@@ -1,10 +1,10 @@
 ---
-layout: ../../layouts/MarkDownPostLayout.astro
-title: 'JavaScrpyto - SecconCTF24'
-pubDate: 2022-07-01
-description: 'Writeup for the challenge JavaScrypto from SecconCTF 2024, This was a really interesting challenge, Showcasing the power of Prototype pollution'
+title: 'JavaScrypto - SECCON CTF24'
+pubDate: 2025-01-30
+description: 'Using prototype pollution to get XSS bypassing AES protections and gaining impact via localstorage partitioning'
 author: 'Winters0x64'
-tags: ["CTF", "Seccon", "Prototype pollution"]
+layout: '../../layouts/MDLayout.astro'
+tags: ["Prototype Pollution"]
 ---
 
 # Intro
@@ -83,7 +83,9 @@ The immediate red flag is the merge function that's being in use, so in theory w
 
 So this is the url that triggers the PPOLL: ```http://foo:123?id=1&__proto__[hello]=cool```
 
+
 # Finding a gadget
+---
 Now we need to find a gadget to exploit this, that's were the CryptoJS lib comes into play,
 
 Lets take a look at the base64 encoding function is CryptoJS
@@ -281,9 +283,10 @@ exploit()
 ```
 
 Now, if we visit the corresponding note that the above exploit generates with the PPOLL exploit we can see alert popup
-![alert_box](../../imgs/post-1/javascrypto.png)
+[alert_box](../../imgs/post-1/javascrypto.png)
 
 # LocalStorage partitioning
+---
 Okay cool now we have a way to execute js on other user sessions but if the admin visits our note then the current_id which is stored in the localstorage would be overwritten with our note's id, this is the client side code which deals with that.
 ```js
 const id = purl().param().id || localStorage.getItem('currentId');
@@ -305,7 +308,7 @@ So how can we now get the flag note's id, since it's overwritten by our noteid?
 
 The answer is that localstorage is partitioned in chrome meaning that if a site a.com has framed another site lets say c.com and b.com also frames the site c.com now if we set something in the localstorage of c.com  framed in  a.com, it won't be reflected in the c.com framed inside b.com, this behaviour is very similar to cache partitioning in chrome.
 
-![parition](../../imgs/post-1/partition.png)
+[parition](../../imgs/post-1/partition.png)
 
 So we can just a link to admin bot, and then in the website create an iframe with src set to our malicious note's id along with the PPOLL exploit and then as the XSS payload inside the malicious note we can give 
 ```html

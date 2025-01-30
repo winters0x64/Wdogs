@@ -1,6 +1,32 @@
 ---
-import Social from './Social.astro';
+
 ---
-<footer>
-  Copyright 2024 Arun Krishnan
-</footer>
+
+<div class="neon_blue" id="footer">
+    Copyright 2024 winters0x64
+</div>
+
+<style>
+    @font-face {
+        font-family: 'Terminus';
+        src: url('/fonts/TerminusModern.ttf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    #footer {
+        font-family: 'Terminus';
+        font-size: 1.1rem;
+        display: flex;
+		justify-content: center;
+		align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .neon_blue {
+        color: rgb(150, 195, 241);
+        text-shadow: #619d87 0px 0px 8px;
+    }
+</style>
