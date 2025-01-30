@@ -88,7 +88,7 @@ So this is the url that triggers the PPOLL: ```http://foo:123?id=1&__proto__[hel
 ---
 Now we need to find a gadget to exploit this, that's were the CryptoJS lib comes into play,
 
-Lets take a look at the base64 encoding function is CryptoJS
+Lets take a look at the base64 encoding function in CryptoJS
 ```js
 (function () {
     // Shortcuts
