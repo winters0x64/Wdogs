@@ -19,14 +19,6 @@ import '../styles/global.css';
 </BaseLayout>
 
 <style>
-    #post h1{
-        font-size: 5rem;
-    }
-
-    #post p{
-        font-size: 2rem;
-    }
-
     @font-face {
         font-family: 'Terminus';
         src: url('/fonts/TerminusModern.ttf') format('woff');
@@ -35,10 +27,9 @@ import '../styles/global.css';
         font-display: swap;
     }
 
-
-    #post_container{
+    #post_container {
         display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
         height: 100%;
         width: 100%;
@@ -46,8 +37,20 @@ import '../styles/global.css';
     }
 
     #post {
-        width: 80%;
+        width: 80%; /* Default width for desktop */
         height: 100%;
+    }
+
+    #post h1 {
+        font-size: 5rem; /* Default size for desktop */
+        color: rgb(150, 195, 241);
+        text-shadow: #619d87 0px 0px 8px;
+    }
+
+    #post p {
+        font-size: 2rem; /* Default size for desktop */
+        color: #619d87;
+        text-shadow: #619d87 0px 0px 8px;
     }
 
     .neon_blue {
@@ -59,4 +62,38 @@ import '../styles/global.css';
         color: #619d87;
         text-shadow: #619d87 0px 0px 8px;
     }
+
+    /* Media Query for Tablets */
+    @media screen and (max-width: 768px) {
+        #post {
+            width: 90%; /* Increase width slightly for better readability */
+        }
+
+        #post h1 {
+            font-size: 3.5rem; /* Scale down heading size */
+        }
+
+        #post p {
+            font-size: 1.5rem; /* Scale down paragraph size */
+        }
+    }
+
+    /* Media Query for Mobile Devices */
+    @media screen and (max-width: 480px) {
+        #post {
+            width: 95%; /* Use almost full width for small screens */
+        }
+
+        #post h1 {
+            font-size: 2.5rem; /* Further scale down heading size */
+        }
+
+        #post p {
+            font-size: 1.25rem; /* Further scale down paragraph size */
+        }
+
+        #post_container {
+            padding: 1rem; /* Add some padding to prevent content from touching edges */
+        }
+}
 </style>

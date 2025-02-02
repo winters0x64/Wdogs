@@ -5,7 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 <BaseLayout title="Readme">
     <div class="neon_blue" id="main_intro">
         <div id="img_container">
-            <img src="/winters.png" alt="">
+            <img id="main_img" src="/winters.png" alt="Winters">
         </div>
 		
         <div id="intro_text">
@@ -85,4 +85,24 @@ import BaseLayout from "../layouts/BaseLayout.astro"
         color: #619d87;
         text-shadow: #619d87 0px 0px 8px;
     }
+
+    @media (max-width: 768px) {
+		#main_img {
+			max-width: 100%;
+		}
+
+        #intro_text {
+            font-size: 1rem;
+        }
+	}
+
+    @media (max-width: 480px) {
+		#main_img {
+			max-width: 100%;
+		}
+
+        #intro_text {
+            font-size: 0.8rem;
+        }
+	}
 </style>

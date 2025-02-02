@@ -54,4 +54,38 @@ let {url, title, description,date } = Astro.props;
         font-weight: bolder;
         font-size: 1.5rem;
     }
+
+    @media screen and (max-width: 768px) {
+        #blog_card h1 {
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
+
+        #blog_card p {
+            font-weight: bolder;
+            font-size: 1rem;
+        }
+
+        #blog_card h2 {
+            font-weight: bolder;
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        #blog_card h1 {
+            font-weight: bolder;
+            font-size: 1.2rem;
+        }
+
+        #blog_card p {
+            font-weight: bolder;
+            font-size: 0.8rem;
+        }
+
+        #blog_card h2 {
+            font-weight: bolder;
+            font-size: 0.8rem;
+        }
+    }
 </style>
