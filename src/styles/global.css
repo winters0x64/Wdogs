@@ -130,3 +130,24 @@ img {
         font-size: 0.875rem; /* 14px / 16 = 0.875rem */
     }
 }
+
+/* Inline code */
+code {
+  font-family: "Fira Code", "Consolas", "Monaco", monospace;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.1em 0.2em;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+pre code {
+  display: block;
+  font-family: "Fira Code", "Consolas", "Monaco", monospace;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
